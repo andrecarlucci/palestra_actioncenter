@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="TdcToast.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TdcToast"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="160"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+    </Page.Resources>
+    
+    <StackPanel>
+        <StackPanel Margin="6">
+            <TextBlock Text="Local Toast" />
+            <TextBox x:Name="Message" />
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Send" Click="SendToast" />
+                <CheckBox x:Name="Ghost" Content="Ghost Toast" Margin="12,0,0,0" />
+            </StackPanel>
+            <Button Content="Remove Toasts" Click="DeleteToast" />
+        </StackPanel>
+
+        <StackPanel Margin="6">
+            <TextBlock Text="Update Tile" />
+            <TextBox x:Name="MessageTile" />
+            <Button Content="Send" Click="UpdateTile" />
+        </StackPanel>
+    </StackPanel>
+</Page>
